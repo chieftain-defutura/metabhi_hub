@@ -106,7 +106,7 @@ export function MoreMenuPopoverButton({ menu }) {
     <Popover
       title={title}
       content={props => <MoreMenuPopoverContent menu={menu} {...props} />}
-      placement="top-end"
+      placement="left"
       offsetDistance={28}
       isVisible={visible}
       onChangeVisible={setVisible}

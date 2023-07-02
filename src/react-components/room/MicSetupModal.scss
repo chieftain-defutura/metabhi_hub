@@ -24,17 +24,21 @@ $mobile-breakpoint-width: 450px;
 }
 
 :local(.audio-io-container) {
-  width: 200px;
+  width: 145px;
+  height: 183px;
   position: relative;
-  border-radius: theme.$border-radius-regular;
+  // border-radius: theme.$border-radius-regular;
+  border-radius: 16px;
   display: flex;
   flex: auto;
   flex-direction: column;
   gap: 10px 10px;
-  padding: 20px;
+  padding: 20px 13px;
   align-items: center;
-  border: 1px solid var(--toolbar-basic-border-color);
-  background-color: theme.$transparent;
+  // border: 1px solid var(--toolbar-basic-border-color);
+  // background-color: theme.$transparent;
+  background: #fff;
+  color: #000;
 
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
@@ -46,7 +50,8 @@ $mobile-breakpoint-width: 450px;
 
   width: 48px;
   height: 48px;
-  color: theme.$text1-color;
+  // color: theme.$text1-color;
+  color: #000;
 }
 
 :local(.icon-disabled) {
@@ -58,11 +63,13 @@ $mobile-breakpoint-width: 450px;
   width: 48px;
   height: 48px;
   color: theme.$disabled-text-color;
+  margin-top: -6px;
+  margin-bottom: 6px;
 }
 
 :local(.icon-container) {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 
 :local(.voice-chat-disabled) {
@@ -134,4 +141,33 @@ $mobile-breakpoint-width: 450px;
 :local(.level-bar) {
   width: 24px;
   height: 100%;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  .circle-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 52px;
+    padding: 16px;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .enter-btn {
+    button {
+      min-width: 250px;
+      border-radius: 34px;
+    }
+  }
+}
+
+.test-audio-btn {
+  margin-top: 24px;
 }

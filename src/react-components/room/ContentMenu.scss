@@ -21,13 +21,17 @@
 :local(.content-menu-button) {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   border: none;
-  border-radius: 8px;
-  background-color: theme.$transparent;
+  border-radius: 59px;
+  background: #fff;
+  color: #000;
+  // background-color: theme.$transparent;
   font-size: theme.$font-size-xs;
   font-weight: theme.$font-weight-bold;
-  align-items: center;
-  padding: 8px 10px;
+  padding: 8px 16px;
+  width: 167px;
 
   & > * {
     margin-right: 8px;
@@ -38,7 +42,8 @@
   }
 
   &:hover {
-    background-color: theme.$button-bg-color-hover;
+    background-color: #e6e1e1;
+    // background-color: theme.$button-bg-color-hover;
   }
 
   &:active {
@@ -46,7 +51,8 @@
   }
 
   svg {
-    color: theme.$text1-color;
+    // color: theme.$text1-color;
+    color: #000;
   }
 }
 

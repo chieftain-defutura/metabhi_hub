@@ -25,17 +25,20 @@
 
 :local(.basic),
 :local(.transparent) {
-  color: theme.$text4-color;
+  // color: theme.$text4-color;
+  color: #fff;
   border: 2px solid theme.$basic-border-color;
   background-color: theme.$basic-color;
 
   svg {
-    color: theme.$text4-color;
+    // color: theme.$text4-color;
+    color: #fff;
   }
 
   &:hover {
-    color: theme.$text4-color-hover;
-    background-color: theme.$basic-color-hover;
+    color: #fff;
+    // background-color: theme.$basic-color-hover;
+    background-color: rgb(104, 102, 102);
   }
 
   &:active {
@@ -46,7 +49,8 @@
 
 :local(.transparent) {
   border-color: theme.$transparent;
-  background-color: theme.$transparent;
+  // background-color: theme.$transparent;
+  background-color: theme.$basic-color-hover;
 }
 
 :local(.primary) {
@@ -59,7 +63,7 @@
 
   &:hover {
     color: theme.$text5-color-hover;
-    background-color: theme.$primary-color-hover;
+    background-color: theme.$primary-color;
   }
 
   &:active {
@@ -226,6 +230,56 @@
     color: theme.$text5-color-pressed;
     background-color: theme.$accent6-color-pressed;
   }
+}
+
+:local(.accent7) {
+  color: theme.$text5-color;
+  background: #007ab8;
+
+  svg {
+    color: theme.$text5-color;
+  }
+
+  &:hover {
+    color: theme.$text5-color-hover;
+    background: #0f8ac7;
+  }
+}
+
+:local(.accent8) {
+  color: theme.$text5-color;
+  background: #7854f6;
+
+  svg {
+    color: theme.$text5-color;
+  }
+
+  &:hover {
+    color: theme.$text5-color-hover;
+    background: #7f67d5;
+  }
+}
+
+:local(.accent9) {
+  color: theme.$text5-color;
+  background: #ff8500;
+
+  svg {
+    color: theme.$text5-color;
+  }
+
+  &:hover {
+    color: theme.$text5-color-hover;
+    background: #f5a046;
+  }
+}
+
+:local(.accent10) {
+  color: theme.$text5-color;
+  background: #acb1ac;
+  height: 48px;
+  width: 230px;
+  font-size: 12px;
 }
 
 :local(.button):disabled {

@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
   width: 48px;
+  margin: 0 auto;
 
   label {
     cursor: pointer;
@@ -29,7 +30,7 @@
 
 :local(.icon-container) {
   position: relative;
-  border-radius: 8px;
+  border-radius: 59px;
   width: 48px;
   height: 48px;
   display: flex;
@@ -61,10 +62,13 @@
 :local(.basic),
 :local(.transparent) {
   :local(.icon-container) {
-    border-color: theme.$toolbar-basic-border-color;
-    background-color: theme.$transparent;
+    // border-color: theme.$toolbar-basic-border-color;
+    // background-color: theme.$transparent;
+    background-color: #fff;
+
     svg {
-      color: theme.$toolbar-basic-icon-color;
+      color: #000;
+      // color: theme.$toolbar-basic-icon-color;
     }
 
     &:disabled,
@@ -78,8 +82,12 @@
   }
 
   &:hover :local(.icon-container) {
-    border: 1px solid theme.$toolbar-basic-border-color;
+    // border: 1px solid theme.$toolbar-basic-border-color;
     background-color: theme.$basic-color-hover;
+
+    svg {
+      color: #fff;
+    }
 
     &:disabled,
     &[disabled] {
@@ -398,8 +406,12 @@
 
 :local(.accent2) {
   :local(.icon-container) {
-    background-color: theme.$accent2-color;
-    border-color: theme.$accent2-border-color;
+    // background-color: theme.$accent2-color;
+    // border-color: theme.$accent2-border-color;
+    background-color: #fff;
+    svg {
+      color: #000;
+    }
 
     &:disabled,
     &[disabled] {
@@ -411,6 +423,10 @@
 
   &:hover :local(.icon-container) {
     background-color: theme.$accent2-color-hover;
+
+    svg {
+      color: #fff;
+    }
 
     &:disabled,
     &[disabled] {
@@ -462,8 +478,13 @@
 
 :local(.accent3) {
   :local(.icon-container) {
-    background-color: theme.$accent3-color;
-    border-color: theme.$accent3-border-color;
+    // background-color: theme.$accent3-color;
+    // border-color: theme.$accent3-border-color;
+    background-color: #fff;
+
+    svg {
+      color: #000;
+    }
 
     &:disabled,
     &[disabled] {
@@ -475,7 +496,9 @@
 
   &:hover :local(.icon-container) {
     background-color: theme.$accent3-color-hover;
-
+    svg {
+      color: #fff;
+    }
     &:disabled,
     &[disabled] {
       svg {
@@ -526,8 +549,13 @@
 
 :local(.accent4) {
   :local(.icon-container) {
-    background-color: theme.$accent4-color;
-    border-color: theme.$accent4-border-color;
+    // background-color: theme.$accent4-color;
+    // border-color: theme.$accent4-border-color;
+    background-color: #fff;
+
+    svg {
+      color: #000;
+    }
 
     &:disabled,
     &[disabled] {
@@ -538,7 +566,8 @@
   }
 
   &:hover :local(.icon-container) {
-    background-color: theme.$accent4-color-hover;
+    // background-color: theme.$accent4-color-hover;
+    background: #fff;
 
     &:disabled,
     &[disabled] {
@@ -590,8 +619,13 @@
 
 :local(.accent5) {
   :local(.icon-container) {
-    background-color: theme.$accent5-color;
-    border-color: theme.$accent5-border-color;
+    // background-color: theme.$accent5-color;
+    // border-color: theme.$accent5-border-color;
+    background-color: #fff;
+
+    svg {
+      color: #000;
+    }
 
     &:disabled,
     &[disabled] {
@@ -603,6 +637,9 @@
 
   &:hover :local(.icon-container) {
     background-color: theme.$accent5-color-hover;
+    svg {
+      color: #fff;
+    }
 
     &:disabled,
     &[disabled] {

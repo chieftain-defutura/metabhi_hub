@@ -7,13 +7,14 @@ import { ReactComponent as MicrophoneMutedIcon } from "../icons/MicrophoneMuted.
 import { ReactComponent as VolumeOffIcon } from "../icons/VolumeOff.svg";
 import { ReactComponent as InfoIcon } from "../icons/Info.svg";
 import styles from "./MicSetupModal.scss";
-import { BackButton } from "../input/BackButton";
+// import { BackButton } from "../input/BackButton";
 import { SelectInputField } from "../input/SelectInputField";
 import { ToggleInput } from "../input/ToggleInput";
 import { Column } from "../layout/Column";
 import { defineMessages, FormattedMessage, useIntl } from "react-intl";
 import { Popover } from "../popover/Popover";
 import { PermissionStatus } from "../../utils/media-devices-utils";
+import { ReactComponent as ChevronBackIcon } from "../icons/ChevronBack.svg";
 import { Spinner } from "../misc/Spinner";
 
 export const tittleMessages = defineMessages({
@@ -52,10 +53,11 @@ export function MicSetupModal({
   return (
     <Modal
       title={intl.formatMessage(tittleMessages[canVoiceChat ? "microphoneSetup" : "audioSetup"])}
-      beforeTitle={<BackButton onClick={onBack} />}
+      // beforeTitle={<BackButton  onClick={onBack} />}
       className={className}
       {...rest}
     >
+      {/* <div style={{ position: "absolute", top: "60%", left: "33%", transform: "translate(-50%, -32%)" }}> */}
       <Column center padding grow className={styles.content}>
         <p>
           <FormattedMessage
@@ -178,9 +180,11 @@ export function MicSetupModal({
               <> {speakerLevelBar} </>
             </div>
             <div className={styles.actionContainer}>
-              <Button preset="basic" onClick={onPlaySound} sm>
-                <FormattedMessage id="mic-setup-modal.test-audio-button" defaultMessage="Test Audio" />
-              </Button>
+              <div className="test-audio-btn">
+                <Button preset="basic" onClick={onPlaySound} sm>
+                  <FormattedMessage id="mic-setup-modal.test-audio-button" defaultMessage="Test Audio" />
+                </Button>
+              </div>
             </div>
             {permissionStatus === PermissionStatus.GRANTED && isAudioOutputSelectAvailable && (
               <div className={styles.selectionContainer}>
@@ -197,10 +201,18 @@ export function MicSetupModal({
             )}
           </div>
         </div>
-        <Button preset="primary" onClick={onEnterRoom}>
-          <FormattedMessage id="mic-setup-modal.enter-room-button" defaultMessage="Enter Room" />
-        </Button>
+        <div className="button-content">
+          <div className="circle-btn" onClick={onBack}>
+            <ChevronBackIcon />
+          </div>
+          <div className="enter-btn">
+            <Button preset="primary" onClick={onEnterRoom}>
+              <FormattedMessage id="mic-setup-modal.enter-room-button" defaultMessage="Enter Room" />
+            </Button>
+          </div>
+        </div>
       </Column>
+      {/* </div> */}
     </Modal>
   );
 }

@@ -46,17 +46,23 @@ export function LeaveRoomModal({ reason, destinationUrl, onClose }) {
   const intl = useIntl();
 
   return (
-    <Modal
-      title={<FormattedMessage id="leave-room-modal.title" defaultMessage="Leave Room" />}
-      beforeTitle={<CloseButton onClick={onClose} />}
-    >
-      <Column padding center centerMd="both" grow>
-        <p>{intl.formatMessage(reasonMessages[reason])}</p>
-        <Button as="a" preset="cancel" href={destinationUrl} rel="noopener noreferrer">
-          {intl.formatMessage(confirmationMessages[reason])}
-        </Button>
-      </Column>
-    </Modal>
+    <div style={{ background: "#fff", color: "#000", borderRadius: "16px", margin: "0", width: "357px" }}>
+      <Modal
+        title={<FormattedMessage id="leave-room-modal.title" defaultMessage="Leave Room" />}
+        beforeTitle={<CloseButton onClick={onClose} />}
+      >
+        <Column padding center centerMd="both" grow>
+          <div style={{ marginRight: "48px" }}>
+            <p>{intl.formatMessage(reasonMessages[reason])}</p>
+          </div>
+          <div style={{ marginRight: "62px" }}>
+            <Button as="a" preset="cancel" href={destinationUrl} rel="noopener noreferrer">
+              {intl.formatMessage(confirmationMessages[reason])}
+            </Button>
+          </div>
+        </Column>
+      </Modal>
+    </div>
   );
 }
 

@@ -3,24 +3,33 @@
 :local(.toolbar) {
   height: 96px;
   display: flex;
+  flex-direction: column;
+  gap: 22px;
   padding: 12px;
   background-color: transparent;
   border-top: 1px solid transparent;
   position: absolute;
-  left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 220px;
 
   @media (min-width: theme.$breakpoint-lg) {
     padding: 12px 24px;
     justify-content: space-between;
   }
 }
+:local(.btnContent) {
+  position: fixed;
+  top: 81px;
+  right: 0;
+  bottom: 0;
+  height: calc(100% - 81px);
+}
 
 :local(.content) {
-  display: flex;
-  flex: 1;
-  justify-content: space-around;
+  // display: flex;
+  // flex: 1;
+  // justify-content: space-around;
+  display: block;
 
   @media (min-width: theme.$breakpoint-lg) {
     flex: 0;

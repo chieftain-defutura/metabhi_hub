@@ -3,7 +3,7 @@
 :local(.content) {
   padding: 24px 8px;
   button {
-    width: 156px;
+    width: 292px;
   }
 
   @media (min-width: theme.$breakpoint-lg) and (min-height: theme.$breakpoint-vr) {
@@ -24,7 +24,8 @@
 
   h5 {
     font-size: theme.$font-size-xs;
-    color: theme.$grey;
+    // color: theme.$grey;
+    color: #fff;
     margin-bottom: 4px;
   }
 

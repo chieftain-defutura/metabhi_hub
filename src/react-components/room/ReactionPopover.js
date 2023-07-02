@@ -87,7 +87,7 @@ export function ReactionPopoverButton({ items, presence, onToggleHandRaised }) {
           />
         );
       }}
-      placement="top"
+      placement="left"
       offsetDistance={28}
       popoverApiRef={popoverApiRef}
       showHeader={!isTooltipVisible}

@@ -47,7 +47,7 @@ export function SharePopoverButton({ items }) {
     <Popover
       title={title}
       content={props => <ButtonGridPopover items={filteredItems} {...props} />}
-      placement="top"
+      placement="left"
       offsetDistance={28}
       disableFullscreen
     >
