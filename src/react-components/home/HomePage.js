@@ -20,10 +20,13 @@ import { SignInButton } from "./SignInButton";
 import { AppLogo } from "../misc/AppLogo";
 import { isHmc } from "../../utils/isHmc";
 import maskEmail from "../../utils/mask-email";
+import { Button } from "../input/Button";
+import { useCssBreakpoints } from "react-use-css-breakpoints";
 
 export function HomePage() {
   const auth = useContext(AuthContext);
   const intl = useIntl();
+  const breakpoint = useCssBreakpoints();
 
   const { results: favoriteRooms } = useFavoriteRooms();
   const { results: publicRooms } = usePublicRooms();
@@ -79,9 +82,15 @@ export function HomePage() {
             <div className={styles.appDescription}>{configs.translation("app-description")}</div>
             <div className="create-room-btn">
               <div>{canCreateRooms && <CreateRoomButton />}</div>
-              <div className="go-to-peach-btn">
+              <div>
                 <a href="https://peach-editor.xyz/spoke" target="_blank" rel="noopener noreferrer">
-                  <button>Go To Peach</button>
+                  <Button
+                    preset="landing"
+                    thick={breakpoint === "sm" || breakpoint === "md"}
+                    xl={breakpoint !== "sm" && breakpoint !== "md"}
+                  >
+                    <FormattedMessage id="go-to-peach-button" defaultMessage="Go To Peach" />
+                  </Button>
                 </a>
               </div>
             </div>
