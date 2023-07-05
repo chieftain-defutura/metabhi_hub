@@ -75,12 +75,19 @@ export function HomePage() {
           <div className={styles.logoContainer}>
             <AppLogo />
           </div>
-          <div className={styles.appInfo}>
+          <div className={styles.appInfo} style={{ margin: "auto" }}>
             <div className={styles.appDescription}>{configs.translation("app-description")}</div>
-            {canCreateRooms && <CreateRoomButton />}
+            <div className="create-room-btn">
+              <div>{canCreateRooms && <CreateRoomButton />}</div>
+              <div className="go-to-peach-btn">
+                <a href="https://peach-editor.xyz/spoke" target="_blank" rel="noopener noreferrer">
+                  <button>Go To Peach</button>
+                </a>
+              </div>
+            </div>
             <PWAButton />
           </div>
-          <div className={styles.heroImageContainer}>
+          {/* <div className={styles.heroImageContainer}>
             <img
               alt={intl.formatMessage(
                 {
@@ -91,7 +98,7 @@ export function HomePage() {
               )}
               src={configs.image("home_background")}
             />
-          </div>
+          </div> */}
         </div>
       </Container>
       {configs.feature("show_feature_panels") && (

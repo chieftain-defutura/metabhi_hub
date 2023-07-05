@@ -99,7 +99,7 @@
   line-height: 1.25;
 
   @media (min-width: theme.$breakpoint-lg) {
-    text-align: left;
+    text-align: center;
     margin: 0 16px 48px 0px;
     max-width: 860px;
     font-size: theme.$font-size-2xl;
@@ -190,5 +190,24 @@
   @media (max-width: theme.$breakpoint-lg) {
     text-align: center;
     align-items: center;
+  }
+}
+.create-room-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 62px;
+  width: 100%;
+  .go-to-peach-btn {
+    button {
+      padding: 24px 62px;
+      border-radius: 13px;
+      background-color: #007ab8;
+      color: white;
+      outline: none;
+      border: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
   }
 }
