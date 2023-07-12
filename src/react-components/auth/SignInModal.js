@@ -6,7 +6,7 @@ import { FormattedMessage, useIntl, defineMessages } from "react-intl";
 import { CancelButton, NextButton, ContinueButton } from "../input/Button";
 import { TextInputField } from "../input/TextInputField";
 import { Column } from "../layout/Column";
-import { LegalMessage } from "./LegalMessage";
+// import { LegalMessage } from "./LegalMessage";
 
 export const SignInStep = {
   submit: "submit",
@@ -77,7 +77,7 @@ export const SignInMessages = defineMessages({
   }
 });
 
-export function SubmitEmail({ onSubmitEmail, initialEmail, privacyUrl, termsUrl, message }) {
+export function SubmitEmail({ onSubmitEmail, initialEmail, message }) {
   const intl = useIntl();
 
   const [email, setEmail] = useState(initialEmail);

@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
+import { FormattedMessage } from "react-intl";
 import classNames from "classnames";
 import configs from "../../utils/configs";
 import { CreateRoomButton } from "./CreateRoomButton";
@@ -25,7 +25,7 @@ import { useCssBreakpoints } from "react-use-css-breakpoints";
 
 export function HomePage() {
   const auth = useContext(AuthContext);
-  const intl = useIntl();
+  // const intl = useIntl();
   const breakpoint = useCssBreakpoints();
 
   const { results: favoriteRooms } = useFavoriteRooms();
