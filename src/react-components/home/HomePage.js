@@ -83,7 +83,7 @@ export function HomePage() {
             <div className="create-room-btn">
               <div>{canCreateRooms && <CreateRoomButton />}</div>
               <div>
-                <a href="https://peach-editor.xyz/spoke" target="_blank" rel="noopener noreferrer">
+                <a href="/spoke" target="_blank" rel="noopener noreferrer">
                   <Button
                     preset="landing"
                     thick={breakpoint === "sm" || breakpoint === "md"}
