@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import classNames from "classnames";
 import configs from "../../utils/configs";
-import { CreateRoomButton } from "./CreateRoomButton";
+// import { CreateRoomButton } from "./CreateRoomButton";
 import { PWAButton } from "./PWAButton";
 import { useFavoriteRooms } from "./useFavoriteRooms";
 import { usePublicRooms } from "./usePublicRooms";
@@ -53,7 +53,7 @@ export function HomePage() {
     }
   }, []);
 
-  const canCreateRooms = !configs.feature("disable_room_creation") || auth.isAdmin;
+  // const canCreateRooms = !configs.feature("disable_room_creation") || auth.isAdmin;
   const email = auth.email;
   return (
     <PageContainer className={styles.homePage}>
@@ -81,7 +81,6 @@ export function HomePage() {
           <div className={styles.appInfo} style={{ margin: "auto" }}>
             <div className={styles.appDescription}>{configs.translation("app-description")}</div>
             <div className="create-room-btn">
-              <div>{canCreateRooms && <CreateRoomButton />}</div>
               <div>
                 <a href="/spoke" target="_blank" rel="noopener noreferrer">
                   <Button
