@@ -16,7 +16,6 @@ import { scaledThumbnailUrlFor } from "../../utils/media-url-utils";
 import { Column } from "../layout/Column";
 import { Container } from "../layout/Container";
 import { SocialBar } from "../home/SocialBar";
-import { SignInButton } from "./SignInButton";
 import { AppLogo } from "../misc/AppLogo";
 import { isHmc } from "../../utils/isHmc";
 import maskEmail from "../../utils/mask-email";
@@ -73,7 +72,7 @@ export function HomePage() {
               </a>
             </div>
           ) : (
-            <SignInButton mobile />
+            <></>
           )}
           <div className={styles.logoContainer}>
             <AppLogo />
@@ -109,47 +108,45 @@ export function HomePage() {
           </div> */}
         </div>
       </Container>
-      {configs.feature("show_feature_panels") && (
-        <Container className={classNames(styles.features, styles.colLg, styles.centerLg)}>
-          <Column padding gap="xl" className={styles.card}>
-            <img src={configs.image("landing_rooms_thumb")} />
-            <h3>
-              <FormattedMessage id="home-page.rooms-title" defaultMessage="Instantly create rooms" />
-            </h3>
-            <p>
-              <FormattedMessage
-                id="home-page.rooms-blurb"
-                defaultMessage="Share virtual spaces with your friends, co-workers, and communities. When you create a room with Hubs, you’ll have a private virtual meeting space that you can instantly share <b>- no downloads or VR headset necessary.</b>"
-                values={{ b: wrapInBold }}
-              />
-            </p>
-          </Column>
-          <Column padding gap="xl" className={styles.card}>
-            <img src={configs.image("landing_communicate_thumb")} />
-            <h3>
-              <FormattedMessage id="home-page.communicate-title" defaultMessage="Communicate and Collaborate" />
-            </h3>
-            <p>
-              <FormattedMessage
-                id="home-page.communicate-blurb"
-                defaultMessage="Choose an avatar to represent you, put on your headphones, and jump right in. Hubs makes it easy to stay connected with voice and text chat to other people in your private room."
-              />
-            </p>
-          </Column>
-          <Column padding gap="xl" className={styles.card}>
-            <img src={configs.image("landing_media_thumb")} />
-            <h3>
-              <FormattedMessage id="home-page.media-title" defaultMessage="An easier way to share media" />
-            </h3>
-            <p>
-              <FormattedMessage
-                id="home-page.media-blurb"
-                defaultMessage="Share content with others in your room by dragging and dropping photos, videos, PDF files, links, and 3D models into your space."
-              />
-            </p>
-          </Column>
-        </Container>
-      )}
+      <Container className={classNames(styles.features, styles.colLg, styles.centerLg)}>
+        <Column padding gap="xl" className={styles.card}>
+          <img src={configs.image("landing_rooms_thumb")} />
+          <h3>
+            <FormattedMessage id="home-page.rooms-title" defaultMessage="Instantly create rooms" />
+          </h3>
+          <p>
+            <FormattedMessage
+              id="home-page.rooms-blurb"
+              defaultMessage="Share virtual spaces with your friends, co-workers, and communities. When you create a room with Hubs, you’ll have a private virtual meeting space that you can instantly share <b>- no downloads or VR headset necessary.</b>"
+              values={{ b: wrapInBold }}
+            />
+          </p>
+        </Column>
+        <Column padding gap="xl" className={styles.card}>
+          <img src={configs.image("landing_communicate_thumb")} />
+          <h3>
+            <FormattedMessage id="home-page.communicate-title" defaultMessage="Communicate and Collaborate" />
+          </h3>
+          <p>
+            <FormattedMessage
+              id="home-page.communicate-blurb"
+              defaultMessage="Choose an avatar to represent you, put on your headphones, and jump right in. Hubs makes it easy to stay connected with voice and text chat to other people in your private room."
+            />
+          </p>
+        </Column>
+        <Column padding gap="xl" className={styles.card}>
+          <img src={configs.image("landing_media_thumb")} />
+          <h3>
+            <FormattedMessage id="home-page.media-title" defaultMessage="An easier way to share media" />
+          </h3>
+          <p>
+            <FormattedMessage
+              id="home-page.media-blurb"
+              defaultMessage="Share content with others in your room by dragging and dropping photos, videos, PDF files, links, and 3D models into your space."
+            />
+          </p>
+        </Column>
+      </Container>
       {sortedPublicRooms.length > 0 && (
         <Container className={styles.roomsContainer}>
           <h3 className={styles.roomsHeading}>

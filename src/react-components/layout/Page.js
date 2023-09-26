@@ -4,12 +4,9 @@ import "./Page.scss";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { MobileNav } from "./MobileNav";
-import Banner from "../banner/Banner";
 
 export function Page({
   showCloud,
-  enableSpoke,
-  editorName,
   showDocsLink,
   docsUrl,
   showSourceLink,
@@ -35,14 +32,10 @@ export function Page({
 }) {
   return (
     <>
-      {isHmc ? <Banner /> : null}
       <Header
         showCloud={showCloud}
-        enableSpoke={enableSpoke}
-        editorName={editorName}
         showDocsLink={showDocsLink}
         docsUrl={docsUrl}
-        showSourceLink={showSourceLink}
         showCommunityLink={showCommunityLink}
         communityUrl={communityUrl}
         isAdmin={isAdmin}

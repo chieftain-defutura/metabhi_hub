@@ -12,11 +12,8 @@ import { AppLogo } from "../misc/AppLogo";
 
 export function Header({
   showCloud,
-  enableSpoke,
-  editorName,
   showDocsLink,
   docsUrl,
-  showSourceLink,
   showCommunityLink,
   communityUrl,
   isAdmin,
@@ -37,27 +34,18 @@ export function Header({
                 configured logo, which is left-aligned, as opposed to the logo that we typically used for HMC, 
                 which is center-aligned.
                 */}
-                <AppLogo forceConfigurableLogo />
+                <AppLogo />
               </a>
             </li>
-            {enableSpoke && (
-              <li>
-                <a href="/spoke">
-                  {isHmc ? <FormattedMessage id="header.spoke" defaultMessage="Spoke" /> : editorName}
-                </a>
-              </li>
-            )}
+            <li>
+              <a href="/spoke">
+                {isHmc ? <FormattedMessage id="header.spoke" defaultMessage="Peach Editor" /> : "Peach Editor"}
+              </a>
+            </li>
             {showDocsLink && (
               <li>
                 <a href={docsUrl}>
                   <FormattedMessage id="header.docs" defaultMessage="Guides" />
-                </a>
-              </li>
-            )}
-            {showSourceLink && (
-              <li>
-                <a href="https://github.com/mozilla/hubs">
-                  <FormattedMessage id="header.source" defaultMessage="Developers" />
                 </a>
               </li>
             )}

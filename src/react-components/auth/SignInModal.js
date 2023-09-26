@@ -99,13 +99,13 @@ export function SubmitEmail({ onSubmitEmail, initialEmail, message }) {
 
   return (
     <Column center padding as="form" onSubmit={onSubmitForm}>
-      <p>
+      <h2>
         {message ? (
           intl.formatMessage(message)
         ) : (
           <FormattedMessage id="sign-in-modal.prompt" defaultMessage="Please Sign In" />
         )}
-      </p>
+      </h2>
       <TextInputField
         name="email"
         type="email"

@@ -18,7 +18,7 @@ export function Modal({
       {(title || beforeTitle || afterTitle) && (
         <div className={styles.header}>
           <div className={styles.beforeTitle}>{beforeTitle}</div>
-          {titleNode ? titleNode : <h5>{title}</h5>}
+          {titleNode ? titleNode : <h1>{title}</h1>}
           <div className={styles.afterTitle}>{afterTitle}</div>
         </div>
       )}

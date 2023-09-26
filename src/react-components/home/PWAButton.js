@@ -5,7 +5,6 @@ import { IconButton } from "../input/IconButton";
 import checkIsMobile from "../../utils/is-mobile";
 import { useInstallPWA } from "./useInstallPWA";
 import styles from "./PWAButton.scss";
-
 const isMobile = checkIsMobile();
 
 export function PWAButton() {
