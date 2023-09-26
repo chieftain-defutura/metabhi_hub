@@ -1,6 +1,5 @@
 import React, { useCallback, useReducer, useContext, useEffect } from "react";
 import { TERMS, PRIVACY } from "../../constants";
-import configs from "../../utils/configs";
 import { AuthContext } from "./AuthContext";
 import { SignInModal, SignInStep, WaitForVerification, SubmitEmail } from "./SignInModal";
 
@@ -70,17 +69,13 @@ export function SignInModalContainer() {
           onSubmitEmail={submitEmail}
           initialEmail={email}
           signInReason={qs.get("sign_in_reason")}
-          termsUrl={configs.link("terms_of_use", TERMS)}
-          showTerms={configs.feature("show_terms")}
-          privacyUrl={configs.link("privacy_notice", PRIVACY)}
-          showPrivacy={configs.feature("show_privacy")}
+          termsUrl={TERMS}
+          showTerms={true}
+          privacyUrl={PRIVACY}
+          showPrivacy={true}
         />
       ) : (
-        <WaitForVerification
-          onCancel={cancel}
-          email={email}
-          showNewsletterSignup={configs.feature("show_newsletter_signup")}
-        />
+        <WaitForVerification onCancel={cancel} email={email} />
       )}
     </SignInModal>
   );

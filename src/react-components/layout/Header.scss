@@ -9,7 +9,7 @@ header {
   }
 
   a {
-    color: theme.$black;
+    color: #FFFFFF;
     font-weight: bold;
     text-decoration: none;
     white-space: nowrap;
@@ -25,7 +25,6 @@ header {
 
     li {
       &:first-child {
-        padding-top: 20px;
         @media(min-width: theme.$breakpoint-lg) {
           img {
             width: 100%;
@@ -76,8 +75,8 @@ header {
 
 :local(.home-link) {
   display: inline-block;
-  width: 124px;
-  height: 83px;
+  width: 100px;
+  height: 60px;
   @media(min-width: theme.$breakpoint-lg) {
    img {
     height: 32px;
@@ -94,7 +93,12 @@ header {
   
   a {
     margin-left: 8px;
-    color: theme.$link-color;
+    background-color: #A259FF;
+    border-color: #A259FF;
+    color: #FFFFFF;
+  }
+  a:hover {
+    color: #FFFFFF;
   }
 
   @media(min-width: theme.$breakpoint-lg) {

@@ -6,10 +6,8 @@ import { Footer } from "./Footer";
 import { MobileNav } from "./MobileNav";
 
 export function Page({
-  showCloud,
   showDocsLink,
   docsUrl,
-  showSourceLink,
   showCommunityLink,
   communityUrl,
   isAdmin,
@@ -26,14 +24,12 @@ export function Page({
   companyLogoUrl,
   showDiscordBotLink,
   appName,
-  isHmc,
   children,
   ...rest
 }) {
   return (
     <>
       <Header
-        showCloud={showCloud}
         showDocsLink={showDocsLink}
         docsUrl={docsUrl}
         showCommunityLink={showCommunityLink}
@@ -42,14 +38,11 @@ export function Page({
         isSignedIn={isSignedIn}
         email={email}
         onSignOut={onSignOut}
-        isHmc={isHmc}
       />
       <main {...rest}>
         <MobileNav
           showDocsLink={showDocsLink}
-          showSourceLink={showSourceLink}
           showCommunityLink={showCommunityLink}
-          isHmc={isHmc}
           isAdmin={isAdmin}
           docsUrl={docsUrl}
           communityUrl={communityUrl}
@@ -67,7 +60,6 @@ export function Page({
         companyLogoUrl={companyLogoUrl}
         showDiscordBotLink={showDiscordBotLink}
         appName={appName}
-        isHmc={isHmc}
       />
     </>
   );

@@ -15,12 +15,11 @@ import { PageContainer } from "../layout/PageContainer";
 import { scaledThumbnailUrlFor } from "../../utils/media-url-utils";
 import { Column } from "../layout/Column";
 import { Container } from "../layout/Container";
-import { SocialBar } from "../home/SocialBar";
 import { AppLogo } from "../misc/AppLogo";
-import { isHmc } from "../../utils/isHmc";
 import maskEmail from "../../utils/mask-email";
 import { Button } from "../input/Button";
 import { useCssBreakpoints } from "react-use-css-breakpoints";
+import { SignInButton } from "./SignInButton";
 
 export function HomePage() {
   const auth = useContext(AuthContext);
@@ -72,7 +71,9 @@ export function HomePage() {
               </a>
             </div>
           ) : (
-            <></>
+            <div className={styles.signInContainer}>
+              <SignInButton mobile />
+            </div>
           )}
           <div className={styles.logoContainer}>
             <AppLogo />
@@ -191,11 +192,6 @@ export function HomePage() {
           </Column>
         </Container>
       )}
-      {isHmc() ? (
-        <Column center>
-          <SocialBar />
-        </Column>
-      ) : null}
     </PageContainer>
   );
 }

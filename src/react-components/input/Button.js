@@ -73,7 +73,7 @@ Button.defaultProps = {
 export function NextButton(props) {
   return (
     <Button preset="accept" {...props}>
-      <FormattedMessage id="button.next" defaultMessage="Next" />
+      <FormattedMessage id="button.next" defaultMessage="Proceed" />
     </Button>
   );
 }

@@ -1,12 +1,16 @@
 @use "../styles/theme.scss";
 
 :local(.modal) {
-  position: relative;
   display: flex;
   flex-direction: column;
-  height: max-content;
-  background-color: transparent;
+  gap: 2rem;
+  height: fit-content;
+  padding: 2rem;
+  background-color: theme.$background2-color;
   border: 1px solid transparent;
+  -webkit-box-shadow: 0px 0px 19px 12px rgba(79,77,79,1);
+  -moz-box-shadow: 0px 0px 19px 12px rgba(79,77,79,1);
+  box-shadow: 0px 0px 19px 12px rgba(79,77,79,1);
   border-radius: theme.$border-radius-regular;
   // margin: 24px;
   margin-top: 14px;

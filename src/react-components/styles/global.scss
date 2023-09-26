@@ -10,7 +10,7 @@
     "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
     monospace;
 
-  --text1-color: #{theme.$black};
+  --text1-color: #FFFFFF;
   --text1-color-hover: #{theme.$black-hover};
   --text1-color-pressed: #{theme.$black-pressed};
   --text2-color: #{theme.$darkgrey};
@@ -77,8 +77,8 @@
   --secondary-color-hover: #{theme.$lightgrey-hover};
   --secondary-color-pressed: #{theme.$lightgrey-pressed};
 
-  --background1-color: #{theme.$white};
-  --background2-color: #{theme.$recessed-bg};
+  --background1-color: #2B313B;
+  --background2-color: #21242C;
   --background3-color: #{theme.$lightgrey};
   --background4-color: #{theme.$grey};
 

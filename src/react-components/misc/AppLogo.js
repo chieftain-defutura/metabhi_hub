@@ -2,10 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import logo from "../../assets/logo.png";
 
-import configs from "../../utils/configs";
-
 export function AppLogo({ className }) {
-  return <img className={className} alt={configs.translation("app-name")} src={logo} />;
+  return <img className={className} alt={"Metakraft Peach"} src={logo} />;
 }
 
 AppLogo.propTypes = {

@@ -5,28 +5,25 @@ import styles from "./Header.scss";
 import { ReactComponent as Hamburger } from "../icons/Hamburger.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCog } from "@fortawesome/free-solid-svg-icons/faCog";
-export function MobileNav({ isHmc, showDocsLink, docsUrl, showSourceLink, showCommunityLink, communityUrl, isAdmin }) {
+export function MobileNav({ showDocsLink, docsUrl, showCommunityLink, communityUrl, isAdmin }) {
   const [navOpen, setNav] = useState(false);
   const toggleNav = () => {
     setNav(!navOpen);
   };
-  const cloud = isHmc ? null : "cloud";
 
   return (
     <>
       <div className={styles.navContainer}>
         <div className={styles.mobileNavWrapper}>
           <Hamburger onClick={toggleNav} />
-          <header className={`${navOpen ? `is-active ${cloud}` : "hide"}`}>
+          <header className={`${navOpen ? `is-active` : "hide"}`}>
             <nav role="navigation">
               <ul>
-                {isHmc && (
-                  <li>
-                    <a href="/spoke">
-                      <FormattedMessage id="header.spoke" defaultMessage="Spoke" />
-                    </a>
-                  </li>
-                )}
+                <li>
+                  <a href="/spoke">
+                    <FormattedMessage id="header.spoke" defaultMessage="Peach Editor" />
+                  </a>
+                </li>
                 {showDocsLink && (
                   <li>
                     <a href={docsUrl}>
@@ -34,31 +31,10 @@ export function MobileNav({ isHmc, showDocsLink, docsUrl, showSourceLink, showCo
                     </a>
                   </li>
                 )}
-                {showSourceLink && (
-                  <li>
-                    <a href="https://github.com/mozilla/hubs">
-                      <FormattedMessage id="header.source" defaultMessage="Developers" />
-                    </a>
-                  </li>
-                )}
                 {showCommunityLink && (
                   <li>
                     <a href={communityUrl}>
                       <FormattedMessage id="header.community" defaultMessage="Community" />
-                    </a>
-                  </li>
-                )}
-                {isHmc && (
-                  <li>
-                    <a href="/cloud">
-                      <FormattedMessage id="header.cloud" defaultMessage="Hubs Cloud" />
-                    </a>
-                  </li>
-                )}
-                {isHmc && (
-                  <li>
-                    <a href="/labs">
-                      <FormattedMessage id="header.labs" defaultMessage="Labs" />
                     </a>
                   </li>
                 )}

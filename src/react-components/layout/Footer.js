@@ -15,8 +15,7 @@ export function Footer({
   showCompanyLogo,
   companyLogoUrl,
   showDiscordBotLink,
-  appName,
-  isHmc
+  appName
 }) {
   return (
     <footer>
@@ -57,20 +56,6 @@ export function Footer({
               <li>
                 <a href="/whats-new">
                   <FormattedMessage id="footer.whats-new" defaultMessage="What's New" />
-                </a>
-              </li>
-            )}
-            {isHmc && (
-              <li>
-                <a target="_blank" rel="noopener noreferrer" href={"https://shop.spreadshirt.com/mozillaMR/"}>
-                  <FormattedMessage id="footer.hubs-merch" defaultMessage="Hubs Merch" />
-                </a>
-              </li>
-            )}
-            {isHmc && (
-              <li>
-                <a target="_blank" rel="noopener noreferrer" href={"https://hubs.mozilla.com/docs/hubs-faq.html"}>
-                  <FormattedMessage id="footer.FAQ" defaultMessage="FAQ" />
                 </a>
               </li>
             )}

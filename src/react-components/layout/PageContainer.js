@@ -4,35 +4,33 @@ import { Page } from "./Page";
 import { AuthContext } from "../auth/AuthContext";
 import configs from "../../utils/configs";
 import { useAccessibleOutlineStyle } from "../input/useAccessibleOutlineStyle";
-import { isHmc } from "../../utils/isHmc";
 import { TERMS, PRIVACY } from "../../constants";
+import logo from "../../assets/logo.png";
 
 export function PageContainer({ children, ...rest }) {
   const auth = useContext(AuthContext);
   useAccessibleOutlineStyle();
   return (
     <Page
-      showCloud={configs.feature("show_cloud")}
-      showDocsLink={configs.feature("show_docs_link")}
-      docsUrl={configs.link("docs", "https://hubs.mozilla.com/docs")}
+      showDocsLink={true}
+      docsUrl={"https://metakraft.gitbook.io/metakraft/"}
       showSourceLink={configs.feature("show_source_link")}
-      showCommunityLink={configs.feature("show_community_link")}
-      communityUrl={configs.link("community", "https://discord.gg/dFJncWwHun")}
+      showCommunityLink={true}
+      communityUrl={"https://t.me/metakraftdiscussions"}
       isAdmin={auth.isAdmin}
       isSignedIn={auth.isSignedIn}
       email={auth.email}
       onSignOut={auth.signOut}
-      hidePoweredBy={configs.feature("hide_powered_by")}
-      showWhatsNewLink={configs.feature("show_whats_new_link")}
-      showTerms={configs.feature("show_terms")}
-      termsUrl={configs.link("terms_of_use", TERMS)}
-      showPrivacy={configs.feature("show_privacy")}
-      privacyUrl={configs.link("privacy_notice", PRIVACY)}
-      showCompanyLogo={configs.feature("show_company_logo")}
-      companyLogoUrl={configs.image("company_logo")}
-      showDiscordBotLink={configs.feature("show_discord_bot_link")}
+      hidePoweredBy={true}
+      showWhatsNewLink={false}
+      showTerms={true}
+      termsUrl={TERMS}
+      showPrivacy={true}
+      privacyUrl={PRIVACY}
+      showCompanyLogo={true}
+      companyLogoUrl={logo}
+      showDiscordBotLink={false}
       appName={configs.translation("app-name")}
-      isHmc={isHmc()}
       {...rest}
     >
       {children}
