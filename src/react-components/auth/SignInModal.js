@@ -84,8 +84,20 @@ export function SubmitEmail({ onSubmitEmail, initialEmail, message, termsUrl, pr
   const [email, setEmail] = useState(initialEmail);
 
   const onSubmitForm = useCallback(
-    e => {
+    async e => {
       e.preventDefault();
+      try {
+        await fetch({
+          url: "https://node-reticulum.onrender.com/auth/register",
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ email: email })
+        });
+      } catch (e) {
+        console.log("");
+      }
       onSubmitEmail(email);
     },
     [onSubmitEmail, email]
