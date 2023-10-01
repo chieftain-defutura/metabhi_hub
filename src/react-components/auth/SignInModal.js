@@ -87,8 +87,7 @@ export function SubmitEmail({ onSubmitEmail, initialEmail, message, termsUrl, pr
     async e => {
       e.preventDefault();
       try {
-        await fetch({
-          url: "https://node-reticulum.onrender.com/auth/register",
+        await fetch("https://node-reticulum.onrender.com/auth/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
